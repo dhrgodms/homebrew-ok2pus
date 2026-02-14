@@ -14,22 +14,28 @@ cask "ok2pus" do
   on_macos do
     on_intel do
       url "https://github.com/dhrgodms/ok2pus/releases/download/v#{version}/ok2pus_darwin_amd64.tar.gz"
-      sha256 "d645a74974c8c7b640abf1fa9ea40a2e35584906ca10c69d016271d9fcc67337"
+      sha256 "6d5e6590a9c06278fbf1619ef61740531fba3554380d14420828cb91e2504832"
     end
     on_arm do
       url "https://github.com/dhrgodms/ok2pus/releases/download/v#{version}/ok2pus_darwin_arm64.tar.gz"
-      sha256 "eb59503d510c225d5373df7ec54b1817ec014ebc62030d9a93fa4d0d2fdc799d"
+      sha256 "7248cdb9449238b8ccacd00a29f10a20c97a02d62234943066fa44fa49463f73"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/dhrgodms/ok2pus/releases/download/v#{version}/ok2pus_linux_amd64.tar.gz"
-      sha256 "8ce9d4420d41d1260d87b000ac0d72ff77c2ab849ba7fd16353262d9200bad36"
+      sha256 "1a1b18150f2b570baa097dbc69a221642e9fbe435f17ca48730a3fa61429b4c5"
     end
     on_arm do
       url "https://github.com/dhrgodms/ok2pus/releases/download/v#{version}/ok2pus_linux_arm64.tar.gz"
-      sha256 "5e820605266bc124018921e11165931115450db74dcf23339fde33b64a7962ef"
+      sha256 "bc67a44c31d69c043872030aab51502704ba23a55e41b495bc9c498074a5fb5b"
+    end
+  end
+
+  postflight do
+    if OS.mac?
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/ok2pus"]
     end
   end
 
