@@ -3,7 +3,7 @@ cask "ok2pus" do
   name "ok2pus"
   desc "Terminal-based SSH connection manager"
   homepage "https://github.com/dhrgodms/ok2pus"
-  version "1.0.0"
+  version "1.0.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "ok2pus" do
   on_macos do
     on_intel do
       url "https://github.com/dhrgodms/ok2pus/releases/download/v#{version}/ok2pus_darwin_amd64.tar.gz"
-      sha256 "6d5e6590a9c06278fbf1619ef61740531fba3554380d14420828cb91e2504832"
+      sha256 "b23093c16fe05d482c0e83e9acda6995552dabef58a88c12bc09cbd50afad741"
     end
     on_arm do
       url "https://github.com/dhrgodms/ok2pus/releases/download/v#{version}/ok2pus_darwin_arm64.tar.gz"
-      sha256 "7248cdb9449238b8ccacd00a29f10a20c97a02d62234943066fa44fa49463f73"
+      sha256 "35a880b8e056047ce28bd0d825b964875a750e08400711c187de3fe08c860f2c"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/dhrgodms/ok2pus/releases/download/v#{version}/ok2pus_linux_amd64.tar.gz"
-      sha256 "1a1b18150f2b570baa097dbc69a221642e9fbe435f17ca48730a3fa61429b4c5"
+      sha256 "673597196e16f5937c0e25d18f536709c7fb09fdfc05f5bdceb28cb407d37ca7"
     end
     on_arm do
       url "https://github.com/dhrgodms/ok2pus/releases/download/v#{version}/ok2pus_linux_arm64.tar.gz"
-      sha256 "bc67a44c31d69c043872030aab51502704ba23a55e41b495bc9c498074a5fb5b"
+      sha256 "60221b3c30174e67545f6dffbae0d5f68214ff296ca6c352b3d277b76720d361"
     end
   end
 
