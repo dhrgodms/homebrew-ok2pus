@@ -5,20 +5,20 @@
 class Ok2pus < Formula
   desc "Terminal-based SSH connection manager"
   homepage "https://github.com/dhrgodms/ok2pus"
-  version "1.0.3"
+  version "1.0.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dhrgodms/ok2pus/releases/download/v1.0.3/ok2pus_darwin_amd64.tar.gz"
-      sha256 "84e0e9e0abfdb4744b3e1608adb0dd81b6ca69051b4ae907161f33548f4c134a"
+      url "https://github.com/dhrgodms/ok2pus/releases/download/v1.0.4/ok2pus_darwin_amd64.tar.gz"
+      sha256 "f3747dcbc0f0d08dbf7bd4a5291eeea3912f71ff022ad6d20cecb3d7ca089657"
 
       def install
         bin.install "ok2pus"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dhrgodms/ok2pus/releases/download/v1.0.3/ok2pus_darwin_arm64.tar.gz"
-      sha256 "660a4a97d1951b5957a8779d130e94e10d71f63ccbf7a885239edf95b7c1954b"
+      url "https://github.com/dhrgodms/ok2pus/releases/download/v1.0.4/ok2pus_darwin_arm64.tar.gz"
+      sha256 "ebc7a1833af0e138a162a56ce638a8dec202f3188bbac4d41eda19040dbf8f14"
 
       def install
         bin.install "ok2pus"
@@ -28,15 +28,15 @@ class Ok2pus < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dhrgodms/ok2pus/releases/download/v1.0.3/ok2pus_linux_amd64.tar.gz"
-      sha256 "572995b5ca879afb075d2306eeae52accf4bf065406a6c19e46f60eeade7cf8f"
+      url "https://github.com/dhrgodms/ok2pus/releases/download/v1.0.4/ok2pus_linux_amd64.tar.gz"
+      sha256 "81ae2de9999a6073b7f7dc003c948a9789cff4b2183673e7b68faed1f52e8d02"
       def install
         bin.install "ok2pus"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dhrgodms/ok2pus/releases/download/v1.0.3/ok2pus_linux_arm64.tar.gz"
-      sha256 "f1521367749d4701d9406432d863477282e59b6ebff0c13493d797642a05a7ab"
+      url "https://github.com/dhrgodms/ok2pus/releases/download/v1.0.4/ok2pus_linux_arm64.tar.gz"
+      sha256 "25b5e1b548da68894ecff0529f1064dd55fb6813a25d7047ec2c0dc5ea77b87e"
       def install
         bin.install "ok2pus"
       end
